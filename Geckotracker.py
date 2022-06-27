@@ -4,17 +4,19 @@ import time
 cg = CoinGeckoAPI()
 
 while 1:
-	par = cg.get_price(ids='eterland', vs_currencies='usd')
+	pair = cg.get_price(ids='eterland', vs_currencies='usd')
 	
-	precio= float(par['eterland']['usd'])
+	price= float(pair['eterland']['usd'])
+	wanted_price= 'The price you want'
 
-	if precio == precio:
-		print(f'Eter: {precio}')
-		print('TIEMPO DE LA ACCION'.center(50,"!"))
+
+	if price == wanted_price:
+		print(f'Current price: {price}')
+		print('It\'s the show time'.center(50,"!"))
 		playsound('alarm.mp3')
 		time.sleep(10)
 	else:
-		print(f'Precio actual: {precio}')
-		print('Esperando precio')
-		time.sleep(5)
+		print(f'Current price: {price}')
+		print('Waiting for the right moment.')
+		time.sleep(60)
 
