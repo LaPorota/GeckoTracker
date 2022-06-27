@@ -10,7 +10,7 @@ while 1:
 	wanted_price= 'The price you want'
 
 
-	if price == wanted_price:
+	if price == wanted_price:  ##### here you could use every comparative you need.
 		print(f'Current price: {price}')
 		print('It\'s the show time'.center(50,"!"))
 		playsound('alarm.mp3')
